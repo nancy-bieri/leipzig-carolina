@@ -513,5 +513,16 @@
   </div>
 </footer>
 
+<script>
+  function padForFooter() {
+    var footer = document.querySelector('footer');
+    var main = document.querySelector('main');
+    if (footer && main) {
+      main.style.paddingBottom = footer.offsetHeight + 'px';
+    }
+  }
+  padForFooter();
+  window.addEventListener('resize', padForFooter);
+</script>
 </body>
 </html>
